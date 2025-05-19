@@ -1,6 +1,7 @@
 package com.example.jvcamera;
 
 import com.example.jvcamera.wallculling.ColoredCubeScene;
+import com.example.jvcamera.wireframe.CubeCameraScene;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
@@ -24,7 +25,7 @@ public class JVCamera extends Application {
         double height = 600;
         CameraScene cameraScene = new ColoredCubeScene(Points.intersectingCubes,viewPort, width, height);
         //CameraScene cameraScene = new PyramidCameraScene(Points.generateSpikeFloor(), viewPort, width, height);
-        //CameraScene cameraScene = new CubeCameraScene(Points.fourCubes(), viewPort, width, height);
+        //CameraScene cameraScene = new CubeCameraScene(Points.fourCubes, viewPort, width, height);
         Group root = cameraScene.drawScene();
 
         Scene scene = new Scene(root, width, height);
